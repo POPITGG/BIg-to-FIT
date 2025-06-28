@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From BIG to FIT: 101</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #f4f4f4;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav {
+      background: #121212;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .nav-links a {
+      margin-left: 2rem;
+      font-weight: 600;
+      color: #f4f4f4;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover { color: #ffd700; }
+
+    .container {
+      width: min(90%, 1100px);
+      margin: auto;
+      padding: 0 1rem;
+      flex: 1;
+    }
+
+    header.hero {
+      background: radial-gradient(ellipse at center, #1f1f1f 0%, #000000 100%);
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+    header.hero h1 {
+      font-size: 3.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    header.hero p {
+      font-size: 1.4rem;
+      color: #bbb;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      border-radius: 30px;
+      background: #ffd700;
+      color: #000;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      margin: 0.5rem;
+      white-space: nowrap;
+    }
+    .btn:hover {
+      background: #ffca28;
+      transform: scale(1.06);
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    }
+
+    section { padding: 4rem 0; }
+    h2.section-title {
+      font-size: 2.2rem;
+      border-left: 5px solid #ffd700;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #1a1a1a, #111);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+      transform: translateY(-5px);
+    }
+    .card h3 { color: #ffd700; margin-bottom: 1rem; }
+    .card p { color: #ccc; }
+
+    .review {
+      background: #1f1f1f;
+      padding: 1.5rem;
+      border-left: 5px solid #ffd700;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+    }
+    .review strong { color: #ffd700; }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+    .about img {
+      max-width: 320px;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .about-text p {
+      font-size: 1.1rem;
+      color: #ddd;
+    }
+
+    .cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: #111;
+  padding: 0.5rem 0.25rem; /* Reduced again */
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 50;
+  border-top: 1px solid #333;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+
+
+    .cta-text {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .footer {
+      background: #0d0d0d;
+      padding: 1.5rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #222;
+    }
+    .footer p {
+      margin: 0.3rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .about { flex-direction: column; text-align: center; }
+      .cta { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>BIG ➝ FIT</strong></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#plans">Plans</a>
+      <a href="#cta">Join Now</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>From BIG to FIT: 101</h1>
+    <p>Helping you build healthy, sustainable, and stronger bodies with confidence.</p>
+    <a class="btn" href="https://forms.gle/placeholder" target="_blank">Take Quiz & Join</a>
+  </header>
+
+  <main class="container">
+    <section id="plans">
+      <h2 class="section-title">Your Transformation Tiers</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>⚡ First 50 Get in Free</h3>
+          <p>Be one of the first 50 to join and get full access to the main plan — 100% FREE.</p>
+          <a href="https://forms.gle/placeholder" class="btn" target="_blank">Claim Spot</a>
+        </div>
+        <div class="card">
+          <h3>Main Transformation Plan – €7.77</h3>
+          <p>Get the full PDF plan: workouts, mindset tips, and a weekly schedule.</p>
+          <a href="https://forms.gle/placeholder" class="btn" target="_blank">Buy Now</a>
+        </div>
+        <div class="card">
+          <h3>Private Discord Access – €5</h3>
+          <p>Join our support group: share progress, get help & exclusive content.</p>
+          <a href="https://forms.gle/placeholder" class="btn" target="_blank">Join Discord</a>
+        </div>
+        <div class="card">
+          <h3>1:1 Coaching (30 Days) – $35/month</h3>
+          <p>Personalized daily coaching, feedback, plan reviews.</p>
+          <a href="https://forms.gle/placeholder" class="btn" target="_blank">Apply Now</a>
+        </div>
+        <div class="card">
+          <h3>DM Support – $5/month</h3>
+          <p>Quick feedback & accountability through daily Instagram/WhatsApp DMs.</p>
+          <a href="https://forms.gle/placeholder" class="btn" target="_blank">DM Access</a>
+        </div>
+        <div class="card">
+          <h3>Weekly Check-Ins – $12/month</h3>
+          <p>Stay on track with weekly video/voice check-ins and plan updates.</p>
+          <a href="https://forms.gle/placeholder" class="btn" target="_blank">Start Check-Ins</a>
+        </div>        
+      </div>
+    </section>
+
+    <section id="reviews">
+      <h2 class="section-title">What Clients Say</h2>
+      <div class="review">
+        <p>"I lost 10kg in 2 months following the plan. Super simple and actually works!"<br><strong>- Laura</strong></p>
+      </div>
+      <div class="review">
+        <p>"The Discord is super helpful — feels like a family pushing you forward."<br><strong>- Mike</strong></p>
+      </div>
+      <div class="review">
+        <p>"Coach really listens and customizes everything. 1-on-1 was the best investment."<br><strong>- Jess</strong></p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">Meet Your Coach</h2>
+      <div class="about">
+        <img src="https://via.placeholder.com/300x300" alt="Your Photo" />
+        <div class="about-text">
+          <p>Hey, I’m [Your Name] — I used to struggle with weight, motivation and bad habits. But after 4+ years of training and mindset work, I’ve helped dozens transform their lives using the exact methods I teach. No crash diets. No extremes. Just smart, sustainable systems that work.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="cta" id="cta">
+    <p class="cta-text">Ready to start? Let’s figure out the best plan for you.</p>
+    <a class="btn" href="https://forms.gle/placeholder" target="_blank">Take the Quiz</a>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 From BIG to FIT: 101. All rights reserved.</p>
+      <p>Contact: frombigtfit101@gmail.com | Instagram: @frombigtofit</p>
+    </div>
+  </footer>
+</body>
+</html>
